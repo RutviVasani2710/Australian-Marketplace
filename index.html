@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/img/logoblackp.png" />
+
+    <title>Home Page</title>
+    <!-- Tailwind CSS -->
+    <script src="./dist/tailwindcss.js"></script>
+    <script src="./js/tailwindConfig.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./dist/swiper-bundle.min.css" />
+  </head>
+  <body class="bg-gray-100 font-normal bg-white">
+    <!-- Navbar start -->
+    <header
+      id="main-header"
+      class="fixed top-0 left-0 w-full z-50 bg-transparent transition-colors duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
+      >
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-3">
+            <img src="./assets/img/logoWhite.svg" id="logoimg" />
+            <div class="text-white font-bold text-xl" id="logo">B2B</div>
+          </div>
+          <div
+            class="header bg-white w-px h-[30px] hidden md:block"
+            id="divider"
+          ></div>
+
+          <!-- Nav -->
+          <nav class="hidden md:block">
+            <ul class="flex space-x-8 font-medium">
+              <li>
+                <a
+                  href="#"
+                  class="nav-link text-white hover:text-blue-400"
+                  id="selected"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link text-neutral-400 hover:text-blue-400"
+                  >Category</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link text-neutral-400 hover:text-blue-400"
+                  >Supplier</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link text-neutral-400 hover:text-blue-400"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Mobile menu end -->
+        </div>
+
+        <!-- Mobile Menu start -->
+        <button id="menuToggle" class="md:hidden text-white focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+
+        <div
+          id="mobileMenu"
+          class="fixed top-0 left-0 w-3/4 h-full bg-black text-white transform -translate-x-full transition-transform duration-300 z-40 md:hidden shadow-growBusinessBox"
+        >
+          <div class="p-6 flex flex-col gap-6 text-lg font-medium">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-3">
+                <img src="./assets/img/logoWhite.svg" id="logoimg" />
+                <div class="text-white font-bold text-xl" id="logo">B2B</div>
+              </div>
+              <button id="menuClose" class="text-white focus:outline-none">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <a href="#" class="hover:text-blue-400">Home</a>
+            <a href="#" class="hover:text-blue-400">Category</a>
+            <a href="#" class="hover:text-blue-400">Supplier</a>
+            <a href="#" class="hover:text-blue-400">Blog</a>
+            <a
+              href="#"
+              class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+        <!-- Button -->
+        <a
+          href="#"
+          class="nav-btn border border-white text-white px-4 py-2 rounded hover:bg-white hover:text-black transition hidden md:block"
+        >
+          Contact Us
+        </a>
+      </div>
+    </header>
+    <!-- Navbar end -->
+    <!-- Backdrop Overlay -->
+    <div
+      id="backdrop"
+      class="fixed inset-0 bg-black/30 backdrop-blur-sm z-30 hidden md:hidden"
+    ></div>
+
+    <!-- Hero section start -->
+    <section
+      class="relative pt-[74px] h-[400px] md:h-[600px] bg-cover bg-center"
+      style="background-image: url('assets/img/Header.svg')"
+    >
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center"
+      >
+        <div class="text-white md:w-4/5 flex flex-col gap-y-[100px]">
+          <h1
+            class="!leading-[50px] md:!leading-[108px] text-3xl md:text-6xl font-black pb-32"
+          >
+            CONNECT WITH TRUSTED <br />
+            SUPPLIER IN
+            <span
+              class="bg-[linear-gradient(185deg,#189EFF_2.07%,#12CE5D_100%)] bg-clip-text text-transparent"
+            >
+              AUSTRALIA
+            </span>
+          </h1>
+        </div>
+      </div>
+
+      <div
+        class="absolute top-[100px] -right-0 h-[650px] w-auto overflow-hidden hidden md:block"
+      >
+        <img
+          src="assets/img/building.png"
+          alt="Modern Building"
+          class="h-full object-cover object-right"
+        />
+      </div>
+    </section>
+    <!-- Hero section end -->
+
+    <!-- Search section start -->
+    <section class="relative">
+      <div
+        class="absolute top-0 left-0 w-full md:w-[413px] h-[413px] bg-cyan-200 rounded-full blur-[200px] -z-10 pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="w-full max-w-xl mb-10">
+          <div class="flex items-center relative h-[77px]">
+            <img src="./assets/icon/search.svg" class="absolute left-[16px]" />
+
+            <input
+              type="text"
+              placeholder="Search supplier"
+              class="flex-grow px-4 py-3 border border-gray-300 w-full rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-700 h-full pr-[124px] pl-[60px]"
+              style="box-shadow: 5px 6px 0px 0px #c9bebe40"
+            />
+            <button
+              class="ml-3 bg-black text-white px-6 py-3 rounded-full hover:bg-gray-900 transition absolute h-[55px] right-[16px]"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+        <div
+          class="flex flex-col sm:flex-row gap-4 font-semibold z-20 relative"
+        >
+          <button
+            class="bg-white text-violet-950 border border-violet-950 px-6 py-3 rounded-full cursor-pointer transition"
+          >
+            Post a Buying Request
+          </button>
+          <button
+            class="bg-white text-violet-950 border border-violet-950 px-6 py-3 rounded-full cursor-pointer transition"
+          >
+            Join as a Supplier
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Search section end -->
+
+    <!-- Category section start -->
+    <section>
+      <div class="max-w-7xl mx-auto px-6 mt-24">
+        <h2
+          class="text-violet-950 text-2xl md:text-3xl font-bold uppercase text-center"
+        >
+          Category
+        </h2>
+        <div
+          class="mt-8 md:mt-14 grid grid-cols-2 grid-rows-4 md:grid-cols-4 md:grid-rows-2 gap-5"
+        >
+          <div
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+          >
+            <div
+              class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
+            >
+              <img src="./assets/icon/category/constructionTrades.svg" />
+            </div>
+            <p class="font-extrabold text-blue-950 mt-4 text-center">
+              Construction & Trades
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+          >
+            <div
+              class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
+            >
+              <img src="./assets/icon/category/health.svg" />
+            </div>
+            <p class="font-extrabold text-blue-950 mt-4 text-center">
+              Healthcare & Medical Supplies
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+          >
+            <div
+              class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
+            >
+              <img src="./assets/icon/category/agriculture.svg" />
+            </div>
+            <p class="font-extrabold text-blue-950 mt-4 text-center">
+              Agriculture & Farming
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+          >
+            <div
+              class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
+            >
+              <img src="./assets/icon/category/retails.svg" />
+            </div>
+            <p class="font-extrabold text-blue-950 mt-4 text-center">
+              Retail & E-commerce Supply
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+          >
+            <div
+              class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
+            >
+              <img src="./assets/icon/category/marketing.svg" />
+            </div>
+            <p class="font-extrabold text-blue-950 mt-4 text-center">
+              Marketing, Creative & Media
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+          >
+            <div
+              class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
+            >
+              <img src="./assets/icon/category/government.svg" />
+            </div>
+            <p class="font-extrabold text-blue-950 mt-4 text-center">
+              Government & Corporate Contracts
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+          >
+            <div
+              class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
+            >
+              <img src="./assets/icon/category/professional.svg" />
+            </div>
+            <p class="font-extrabold text-blue-950 mt-4 text-center">
+              Professional & Business Services
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+          >
+            <div
+              class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
+            >
+              <img src="./assets/icon/category/logistics.svg" />
+            </div>
+            <p class="font-extrabold text-blue-950 mt-4 text-center">
+              Logistics, Transport & Warehousing
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Category section end -->
+
+    <!-- Featured / Verified Suppliers section start -->
+    <section>
+      <div class="max-w-7xl mx-auto px-6 mt-16 md:mt-32">
+        <h2
+          class="text-violet-950 text-2xl md:text-3xl font-bold uppercase text-center"
+        >
+          Featured / Verified Suppliers
+        </h2>
+        <div class="swiper mySwiper mt-8 md:mt-14">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide flex justify-center">
+              <div class="flex flex-col gap-1 w-fit items-center">
+                <img
+                  src="./assets/img/Avatar.png"
+                  height="150px"
+                  width="150px"
+                />
+                <p
+                  class="text-blue-950 font-semibold text-center mt-2 font-poppins"
+                >
+                  Paul Miles
+                </p>
+                <div class="flex gap-1">
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img src="./assets/img/star.png" height="18px" width="18px" />
+                </div>
+                <p class="text-sm font-medium text-gray-400 font-poppins">
+                  Construction & Trades
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <div class="flex flex-col gap-1 w-fit items-center">
+                <img
+                  src="./assets/img/Avatar_2.png"
+                  height="150px"
+                  width="150px"
+                />
+                <p
+                  class="text-blue-950 font-semibold text-center mt-2 font-poppins"
+                >
+                  Jania Garnbet
+                </p>
+                <div class="flex gap-1">
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img src="./assets/img/star.png" height="18px" width="18px" />
+                </div>
+                <p class="text-sm font-medium text-gray-400 font-poppins">
+                  IT & Digital Services
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <div class="flex flex-col gap-1 w-fit items-center">
+                <img
+                  src="./assets/img/Avatar_3.png"
+                  height="150px"
+                  width="150px"
+                />
+                <p
+                  class="text-blue-950 font-semibold text-center mt-2 font-poppins"
+                >
+                  James Nilson
+                </p>
+                <div class="flex gap-1">
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img src="./assets/img/star.png" height="18px" width="18px" />
+                </div>
+                <p class="text-sm font-medium text-gray-400 font-poppins">
+                  Agriculture & Farming
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <div class="flex flex-col gap-1 w-fit items-center">
+                <img
+                  src="./assets/img/Avatar_4.png"
+                  height="150px"
+                  width="150px"
+                />
+                <p
+                  class="text-blue-950 font-semibold text-center mt-2 font-poppins"
+                >
+                  Mia Miles
+                </p>
+                <div class="flex gap-1">
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img src="./assets/img/star.png" height="18px" width="18px" />
+                </div>
+                <p class="text-sm font-medium text-gray-400 font-poppins">
+                  Construction & Trades
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <div class="flex flex-col gap-1 w-fit items-center">
+                <img
+                  src="./assets/img/Avatar.png"
+                  height="150px"
+                  width="150px"
+                />
+                <p
+                  class="text-blue-950 font-semibold text-center mt-2 font-poppins"
+                >
+                  Paul Miles 1
+                </p>
+                <div class="flex gap-1">
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img src="./assets/img/star.png" height="18px" width="18px" />
+                </div>
+                <p class="text-sm font-medium text-gray-400 font-poppins">
+                  Construction & Trades
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <div class="flex flex-col gap-1 w-fit items-center">
+                <img
+                  src="./assets/img/Avatar_2.png"
+                  height="150px"
+                  width="150px"
+                />
+                <p
+                  class="text-blue-950 font-semibold text-center mt-2 font-poppins"
+                >
+                  Jania Garnbet 2
+                </p>
+                <div class="flex gap-1">
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img src="./assets/img/star.png" height="18px" width="18px" />
+                </div>
+                <p class="text-sm font-medium text-gray-400 font-poppins">
+                  IT & Digital Services
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <div class="flex flex-col gap-1 w-fit items-center">
+                <img
+                  src="./assets/img/Avatar_3.png"
+                  height="150px"
+                  width="150px"
+                />
+                <p
+                  class="text-blue-950 font-semibold text-center mt-2 font-poppins"
+                >
+                  James Nilson 3
+                </p>
+                <div class="flex gap-1">
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img src="./assets/img/star.png" height="18px" width="18px" />
+                </div>
+                <p class="text-sm font-medium text-gray-400 font-poppins">
+                  Agriculture & Farming
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide flex justify-center">
+              <div class="flex flex-col gap-1 w-fit items-center">
+                <img
+                  src="./assets/img/Avatar_4.png"
+                  height="150px"
+                  width="150px"
+                />
+                <p
+                  class="text-blue-950 font-semibold text-center mt-2 font-poppins"
+                >
+                  Mia Miles 4
+                </p>
+                <div class="flex gap-1">
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img
+                    src="./assets/img/starActive.png"
+                    height="18px"
+                    width="18px"
+                  />
+                  <img src="./assets/img/star.png" height="18px" width="18px" />
+                </div>
+                <p class="text-sm font-medium text-gray-400 font-poppins">
+                  Construction & Trades
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-button-next font-black text-gray-400 after:text-3xl after:content-['next']"
+          ></div>
+          <div
+            class="swiper-button-prev font-black text-gray-400 after:text-3xl after:content-['prev']"
+          ></div>
+        </div>
+      </div>
+    </section>
+    <!-- Featured / Verified Suppliers section End -->
+
+    <!-- Need bulk products or services start -->
+    <section>
+      <div class="mt-28">
+        <div
+          style="background-image: url('assets/img/bulkProduct.svg')"
+          class="px-4 lg:p-24 bg-auto xl:bg-cover bg-bottom relative flex flex-col"
+        >
+          <img
+            class="w-full h-[70px] absolute -top-[1px] left-0 hidden lg:block"
+            src="./assets/img/bulkProductVector.png"
+          />
+          <img
+            class="w-full h-[70px] absolute -bottom-2 left-0 hidden lg:block"
+            src="./assets/img/bulkProductVector2.png"
+          />
+          <div class="flex flex-col gap-14 items-center pt-[50px] pb-[250px]">
+            <div class="flex flex-col gap-5">
+              <h2
+                class="text-white text-3xl md:text-5xl font-semibold text-center"
+              >
+                Need bulk products or services?
+              </h2>
+              <h2
+                class="text-2xl md:text-4xl font-semibold text-center bg-[linear-gradient(185deg,#189EFF_2.07%,#12CE5D_100%)] bg-clip-text text-transparent"
+              >
+                Get quotes from verified suppliers
+              </h2>
+            </div>
+            <button
+              class="bg-white text-violet-950 border border-violet-950 px-14 py-3 rounded-full cursor-pointer transition font-semibold max-w-[400px]"
+            >
+              Click here to quotes from Buyers
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Need bulk products or services end -->
+
+    <!-- Grow your business with Australia’s start -->
+    <section
+      class="relative -top-[200px] md:-top-[250px] -mb-[120px] p-4 xl:p-[0px]"
+    >
+      <div class="max-w-7xl mx-auto w-full shadow-growBusinessBox rounded-xl">
+        <div
+          class="bg-white shadow-growBusinessBox p-4 lg:p-20 rounded-xl w-full relative"
+        >
+          <div class="flex flex-col gap-14 items-center relative z-20">
+            <div class="flex flex-col gap-5">
+              <h2
+                class="text-slate-800 text-3xl md:text-5xl font-semibold text-center"
+              >
+                Grow your business with Australia’s
+              </h2>
+              <h2
+                class="text-2xl md:text-4xl font-semibold text-center bg-[linear-gradient(185deg,#6218FF_2.07%,#CE1212_100%)] bg-clip-text text-transparent"
+              >
+                trusted B2B network
+              </h2>
+            </div>
+            <button
+              class="text-white bg-violet-950 border border-violet-950 px-8 lg:px-14 py-3 rounded-full cursor-pointer transition font-semibold max-w-[400px]"
+            >
+              Click here to quotes from Buyers
+            </button>
+          </div>
+          <img
+            src="./assets/img/growright.svg"
+            class="absolute right-0 bottom-0 rounded-xl h-full lg:h-auto"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Grow your business with Australia’s end -->
+
+    <!-- Streamline ordering start -->
+    <section class="p-4 xl:p-[0px]">
+      <div class="max-w-7xl mx-auto w-full">
+        <h2
+          class="text-slate-800 text-3xl md:text-5xl font-semibold text-center max-w-[900px] mx-auto"
+        >
+          Streamline ordering from search to fulfilment all in one place
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-1 mt-8 md:mt-14">
+          <div>
+            <div class="space-y-10 relative">
+              <!-- Vertical line -->
+              <div
+                class="absolute left-4 top-3 bottom-3 border border-dashed border-green-500"
+              ></div>
+
+              <!-- Step 1 -->
+              <div class="flex items-start gap-4 relative">
+                <div
+                  class="min-w-8 min-h-8 rounded-full bg-green-500 text-white flex items-center justify-center text-sm font-bold z-10 shadow-trueIcon"
+                >
+                  <img
+                    src="./assets/img/trueIconGreen.svg"
+                    height="8px"
+                    width="16px"
+                  />
+                </div>
+                <div
+                  class="text-zinc-500 text-xl leading-relaxed max-w-[500px]"
+                >
+                  <h3
+                    class="bg-[linear-gradient(185deg,#189EFF_2.07%,#12CE5D_100%)] bg-clip-text text-transparent text-2xl font-medium"
+                  >
+                    Search for matches
+                  </h3>
+                  Search and filter from millions of product and supplier
+                  offerings to find the matching ones for your business.
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="flex items-start gap-4 relative">
+                <div
+                  class="min-w-8 min-h-8 rounded-full bg-white text-white flex items-center justify-center text-sm font-bold z-10 shadow-trueIcon"
+                >
+                  <img
+                    src="./assets/img/trueIcon.svg"
+                    height="8px"
+                    width="16px"
+                  />
+                </div>
+                <div class="text-zinc-500 text-xl leading-relaxed">
+                  <h3 class="text-slate-800 text-2xl font-medium">
+                    Identify the right one
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="flex items-start gap-4 relative">
+                <div
+                  class="min-w-8 min-h-8 rounded-full bg-white text-white flex items-center justify-center text-sm font-bold z-10 shadow-trueIcon"
+                >
+                  <img
+                    src="./assets/img/trueIcon.svg"
+                    height="8px"
+                    width="16px"
+                  />
+                </div>
+                <div class="text-zinc-500 text-xl leading-relaxed">
+                  <h3 class="text-slate-800 text-2xl font-medium">
+                    Pay with confidence
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="flex items-start gap-4 relative">
+                <div
+                  class="min-w-8 min-h-8 rounded-full bg-white text-white flex items-center justify-center text-sm font-bold z-10 shadow-trueIcon"
+                >
+                  <img
+                    src="./assets/img/trueIcon.svg"
+                    height="8px"
+                    width="16px"
+                  />
+                </div>
+                <div class="text-zinc-500 text-xl leading-relaxed">
+                  <h3 class="text-slate-800 text-2xl font-medium">
+                    Fulfill with transparency
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Step 5 -->
+              <div class="flex items-start gap-4 relative">
+                <div
+                  class="min-w-8 min-h-8 rounded-full bg-white text-white flex items-center justify-center text-sm font-bold z-10 shadow-trueIcon"
+                >
+                  <img
+                    src="./assets/img/trueIcon.svg"
+                    height="8px"
+                    width="16px"
+                  />
+                </div>
+                <div class="text-zinc-500 text-xl leading-relaxed">
+                  <h3 class="text-slate-800 text-2xl font-medium">
+                    Manage with ease
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-end justift-center mt-8 md:mt-[0px]">
+            <img src="./assets/img/StreamlineOrdering.png" class="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Streamline ordering end -->
+
+    <!-- Industry Insights start -->
+    <section>
+      <div class="bg-purple-50 mt-10 md:mt-24 pt-10 md:pt-20 pb-48 md:pb-40">
+        <div class="max-w-7xl mx-auto p-4 xl:p-[0px]">
+          <h2
+            class="text-violet-950 text-2xl md:text-3xl font-bold uppercase text-center"
+          >
+            Industry Insights / Blog Highlights
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10 md:mt-20">
+            <div class="flex flex-col gap-8 md:gap-24 items-center">
+              <img src="./assets/img/trustpilot.png" width="200px" />
+              <div class="flex gap-8 items-center">
+                <div
+                  class="font-semibold text-gray-400 after:text-3xl after:content-['<'] industry-prev relative"
+                ></div>
+                <div class="text-blue-950">
+                  <span class="text-5xl">01</span>/25
+                </div>
+                <div
+                  class="font-semibold text-gray-400 after:text-3xl after:content-['>'] industry-next relative top-0"
+                ></div>
+              </div>
+            </div>
+            <div class="col-span-2">
+              <!-- Swiper -->
+              <div class="swiper lastSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide h-auto">
+                    <div
+                      class="bg-white rounded-2xl shadow-categoryBox p-8 max-w-[620px] h-full"
+                    >
+                      <div class="flex flex-col gap-12">
+                        <div class="flex justify-between w-full">
+                          <div class="flex flex-col gap-3">
+                            <h3 class="text-blue-950 text-xl font-semibold">
+                              Construction & Trades
+                            </h3>
+                            <p class="text-zinc-400 text-sm">12/08/2025</p>
+                          </div>
+                          <div
+                            class="w-[84px] bg-emerald-50 flex p-2 gap-2 justify-center items-center rounded-lg h-[42px] font-semibold"
+                          >
+                            <svg
+                              width="17"
+                              height="16"
+                              viewBox="0 0 17 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M7.54894 0.927052C7.8483 0.0057416 9.1517 0.00573945 9.45106 0.92705L10.6329 4.56434C10.7668 4.97636 11.1507 5.25532 11.5839 5.25532H15.4084C16.3771 5.25532 16.7799 6.49494 15.9962 7.06434L12.9021 9.31231C12.5516 9.56695 12.405 10.0183 12.5389 10.4303L13.7207 14.0676C14.02 14.9889 12.9656 15.7551 12.1818 15.1857L9.08779 12.9377C8.7373 12.6831 8.2627 12.6831 7.91222 12.9377L4.81815 15.1857C4.03444 15.7551 2.97996 14.9889 3.27931 14.0676L4.46114 10.4303C4.59501 10.0183 4.44835 9.56695 4.09787 9.31231L1.00381 7.06434C0.220092 6.49494 0.622867 5.25532 1.59159 5.25532H5.41606C5.84929 5.25532 6.23324 4.97636 6.36712 4.56434L7.54894 0.927052Z"
+                                fill="#51B27E"
+                              />
+                            </svg>
+                            <span>5.0</span>
+                          </div>
+                        </div>
+                        <p class="text-blue-950">
+                          Lorem ipsum dolor sit amet, consectetur adip iscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim adminim veniam, Lorem
+                          ipsum dolor sit amet, consectetur. Lorem ipsum dolor
+                          sit amet, consectetur adip iscing elit, sed do eiusmod
+                          tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide h-auto">
+                    <div
+                      class="bg-white rounded-2xl shadow-categoryBox p-8 max-w-[620px] h-full"
+                    >
+                      <div class="flex flex-col gap-12">
+                        <div class="flex justify-between w-full">
+                          <div class="flex flex-col gap-3">
+                            <h3 class="text-blue-950 text-xl font-semibold">
+                              Healthcare & Medical Supplies
+                            </h3>
+                            <p class="text-zinc-400 text-sm">12/08/2025</p>
+                          </div>
+                          <div
+                            class="w-[84px] bg-emerald-50 flex p-2 gap-2 justify-center items-center rounded-lg h-[42px] font-semibold"
+                          >
+                            <svg
+                              width="17"
+                              height="16"
+                              viewBox="0 0 17 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M7.54894 0.927052C7.8483 0.0057416 9.1517 0.00573945 9.45106 0.92705L10.6329 4.56434C10.7668 4.97636 11.1507 5.25532 11.5839 5.25532H15.4084C16.3771 5.25532 16.7799 6.49494 15.9962 7.06434L12.9021 9.31231C12.5516 9.56695 12.405 10.0183 12.5389 10.4303L13.7207 14.0676C14.02 14.9889 12.9656 15.7551 12.1818 15.1857L9.08779 12.9377C8.7373 12.6831 8.2627 12.6831 7.91222 12.9377L4.81815 15.1857C4.03444 15.7551 2.97996 14.9889 3.27931 14.0676L4.46114 10.4303C4.59501 10.0183 4.44835 9.56695 4.09787 9.31231L1.00381 7.06434C0.220092 6.49494 0.622867 5.25532 1.59159 5.25532H5.41606C5.84929 5.25532 6.23324 4.97636 6.36712 4.56434L7.54894 0.927052Z"
+                                fill="#51B27E"
+                              />
+                            </svg>
+                            <span>5.0</span>
+                          </div>
+                        </div>
+                        <p class="text-blue-950">
+                          Lorem ipsum dolor sit amet, consectetur adip iscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim adminim veniam, Lorem
+                          ipsum dolor sit amet, consectetur. Lorem ipsum dolor
+                          sit amet, consectetur adip iscing elit, sed do eiusmod
+                          tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Industry Insights end -->
+
+    <!-- Subscribe to Newsletters start -->
+    <section
+      class="px-4 xl:p-[0px] relative -top-[120px] md:-top-[60px] md:-mb-[60px] -mb-[150px]"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="bg-[linear-gradient(90deg,#20AA3E_07%,#03A588_100%)] p-4 md:p-8 rounded-lg"
+        >
+          <div
+            class="flex flex-col md:flex-row gap-10 justify-between items-start md:items-center"
+          >
+            <div>
+              <h2 class="text-white font-semibold text-2xl">
+                Subscribe to Newsletters
+              </h2>
+              <p class="text-emerald-200">Stay update</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="h-[46px] px-4 py-2 bg-black-6 placeholder-white text-white rounded-md border-none focus:outline-none focus:ring-2 focus:ring-green-300 w-full sm:min-w-auto lg:min-w-[340px]"
+              />
+              <button
+                class="h-[46px] p-3 text-white bg-black-6 border rounded-md"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Subscribe to Newsletters end -->
+
+    <!-- Footer start -->
+    <footer class="mt-24">
+      <div class="max-w-7xl mx-auto p-4 xl:p-[0px]">
+        <div class="flex gap-2 items-center mb-10">
+          <img src="./assets/img/logoBlack.svg" />
+          <div class="text-black font-bold text-xl">B2B</div>
+          <div class="w-full h-px bg-stone-200"></div>
+        </div>
+        <div class="mb-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-4 lg:col-span-2">
+            <p class="text-zinc-500 font-medium !leading-[36px]">
+              Lorem Ipsum has been the industry's standard dummy text ever since
+              the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+          </div>
+          <div class="text-violet-950 col-span-4 md:col-span-2 lg:col-span-1">
+            <h2 class="text-xl font-bold">Other Pages</h2>
+            <div class="w-[30px] bg-violet-950 h-[3px] my-3"></div>
+            <div class="flex flex-col gap-4">
+              <p>About us</p>
+              <p>Contact us</p>
+              <p>Categories</p>
+              <p>Suppliers</p>
+              <p>Blogs</p>
+            </div>
+          </div>
+          <div class="text-violet-950 col-span-4 md:col-span-2 lg:col-span-1">
+            <h2 class="text-xl font-bold">Get In Touch</h2>
+            <div class="w-[30px] bg-violet-950 h-[3px] my-3"></div>
+            <div class="flex flex-col gap-4">
+              <div class="flex gap-2">
+                <img src="./assets/icon/phone.svg" />
+                <p>+91 90999 90999</p>
+              </div>
+              <div class="flex gap-2">
+                <img src="./assets/icon/phone.svg" />
+                <p>+91 80899 80899</p>
+              </div>
+              <div class="flex gap-2">
+                <img src="./assets/icon/mail.svg" />
+                <p>hello@email.com</p>
+              </div>
+              <div class="flex gap-3 mt-4">
+                <img src="./assets/icon/twiteer.svg" />
+                <img src="./assets/icon/instagram.svg" />
+                <img src="./assets/icon/facebook.svg" />
+                <img src="./assets/icon/youtube.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-stone-50 py-6 text-neutral-400 px-4">
+        <div
+          class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center"
+        >
+          <p>Copyright © 2024 Company name. All Rights Reserved.</p>
+          <p>Terms of use  |   Privacy Policy</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- JavaScript -->
+    <script src="./dist/swiper-bundle.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/homepage .js"></script>
+  </body>
+</html>
