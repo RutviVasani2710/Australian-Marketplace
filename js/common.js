@@ -50,7 +50,7 @@ window.addEventListener("scroll", () => {
     divider.classList.remove("bg-black");
     divider.classList.add("bg-white");
 
-    logoimg.setAttribute("src", "./assets/img/logowhite.svg");
+    logoimg.setAttribute("src", "./assets/img/logoWhite.svg");
 
     navLinks.classList.add("text-white", "hover:text-blue-400");
     navLinks.classList.remove("text-black", "hover:text-blue-600");
