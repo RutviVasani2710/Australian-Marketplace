@@ -14,6 +14,23 @@ tailwind.config = {
       colors: {
         "black-6": "#0000000F",
       },
+      transform: {
+        "3d-hover":
+          "perspective(999px) rotateX(0deg) translate3d(0px, -4px, 20px)",
+      },
     },
   },
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities(
+        {
+          ".hover-3d": {
+            transform:
+              "perspective(999px) rotateX(0deg) translate3d(0px, -4px, 20px)",
+          },
+        },
+        ["hover"]
+      );
+    },
+  ],
 };

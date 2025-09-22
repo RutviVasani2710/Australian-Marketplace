@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./dist/swiper-bundle.min.css" />
   </head>
-  <body class="bg-gray-100 font-normal bg-white">
+  <body class="bg-gray-100 font-normal bg-white overflow-x-hidden">
     <!-- Navbar start -->
     <header
       id="main-header"
@@ -164,22 +164,21 @@
             </span>
           </h1>
         </div>
-      </div>
-
-      <div
-        class="absolute top-[100px] -right-0 h-[650px] w-auto overflow-hidden hidden md:block"
-      >
-        <img
-          src="assets/img/building.png"
-          alt="Modern Building"
-          class="h-full object-cover object-right"
-        />
+        <div
+          class="absolute top-[80px] -right-[190px] w-auto h-[650px] overflow-hidden hidden md:flex justify-end"
+        >
+          <img
+            src="assets/img/building.png"
+            alt="Modern Building"
+            class="h-full object-cover object-left"
+          />
+        </div>
       </div>
     </section>
     <!-- Hero section end -->
 
     <!-- Search section start -->
-    <section class="relative">
+    <section class="relative md:pb-16">
       <div
         class="absolute top-0 left-0 w-full md:w-[413px] h-[413px] bg-cyan-200 rounded-full blur-[200px] -z-10 pointer-events-none"
       ></div>
@@ -222,7 +221,7 @@
 
     <!-- Category section start -->
     <section>
-      <div class="max-w-7xl mx-auto px-6 mt-24">
+      <div class="max-w-7xl mx-auto px-6 mt-28">
         <h2
           class="text-violet-950 text-2xl md:text-3xl font-bold uppercase text-center"
         >
@@ -232,7 +231,7 @@
           class="mt-8 md:mt-14 grid grid-cols-2 grid-rows-4 md:grid-cols-4 md:grid-rows-2 gap-5"
         >
           <div
-            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center hover:hover-3d transition-transform duration-300 hover:shadow-trueIcon"
           >
             <div
               class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
@@ -244,7 +243,7 @@
             </p>
           </div>
           <div
-            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center hover:hover-3d transition-transform duration-300 hover:shadow-trueIcon"
           >
             <div
               class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
@@ -256,7 +255,7 @@
             </p>
           </div>
           <div
-            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center hover:hover-3d transition-transform duration-300 hover:shadow-trueIcon"
           >
             <div
               class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
@@ -268,7 +267,7 @@
             </p>
           </div>
           <div
-            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center hover:hover-3d transition-transform duration-300 hover:shadow-trueIcon"
           >
             <div
               class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
@@ -280,7 +279,7 @@
             </p>
           </div>
           <div
-            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center hover:hover-3d transition-transform duration-300 hover:shadow-trueIcon"
           >
             <div
               class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
@@ -292,7 +291,7 @@
             </p>
           </div>
           <div
-            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center hover:hover-3d transition-transform duration-300 hover:shadow-trueIcon"
           >
             <div
               class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
@@ -304,7 +303,7 @@
             </p>
           </div>
           <div
-            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center hover:hover-3d transition-transform duration-300 hover:shadow-trueIcon"
           >
             <div
               class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
@@ -316,7 +315,7 @@
             </p>
           </div>
           <div
-            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center"
+            class="bg-white rounded-2xl shadow-categoryBox p-5 flex flex-col justify-center items-center hover:hover-3d transition-transform duration-300 hover:shadow-trueIcon"
           >
             <div
               class="rounded-full h-[74px] w-[74px] bg-neutral-100 flex justify-center"
@@ -343,7 +342,9 @@
         <div class="swiper mySwiper mt-8 md:mt-14">
           <div class="swiper-wrapper">
             <div class="swiper-slide flex justify-center">
-              <div class="flex flex-col gap-1 w-fit items-center">
+              <div
+                class="flex flex-col gap-1 w-fit items-center hover:hover-3d transition-transform duration-300 p-4 rounded-lg"
+              >
                 <img
                   src="./assets/img/Avatar.png"
                   height="150px"
@@ -383,7 +384,9 @@
               </div>
             </div>
             <div class="swiper-slide flex justify-center">
-              <div class="flex flex-col gap-1 w-fit items-center">
+              <div
+                class="flex flex-col gap-1 w-fit items-center hover:hover-3d transition-transform duration-300 p-4 rounded-lg"
+              >
                 <img
                   src="./assets/img/Avatar_2.png"
                   height="150px"
@@ -423,7 +426,9 @@
               </div>
             </div>
             <div class="swiper-slide flex justify-center">
-              <div class="flex flex-col gap-1 w-fit items-center">
+              <div
+                class="flex flex-col gap-1 w-fit items-center hover:hover-3d transition-transform duration-300 p-4 rounded-lg"
+              >
                 <img
                   src="./assets/img/Avatar_3.png"
                   height="150px"
@@ -463,7 +468,9 @@
               </div>
             </div>
             <div class="swiper-slide flex justify-center">
-              <div class="flex flex-col gap-1 w-fit items-center">
+              <div
+                class="flex flex-col gap-1 w-fit items-center hover:hover-3d transition-transform duration-300 p-4 rounded-lg"
+              >
                 <img
                   src="./assets/img/Avatar_4.png"
                   height="150px"
@@ -503,7 +510,9 @@
               </div>
             </div>
             <div class="swiper-slide flex justify-center">
-              <div class="flex flex-col gap-1 w-fit items-center">
+              <div
+                class="flex flex-col gap-1 w-fit items-center hover:hover-3d transition-transform duration-300 p-4 rounded-lg"
+              >
                 <img
                   src="./assets/img/Avatar.png"
                   height="150px"
@@ -543,7 +552,9 @@
               </div>
             </div>
             <div class="swiper-slide flex justify-center">
-              <div class="flex flex-col gap-1 w-fit items-center">
+              <div
+                class="flex flex-col gap-1 w-fit items-center hover:hover-3d transition-transform duration-300 p-4 rounded-lg"
+              >
                 <img
                   src="./assets/img/Avatar_2.png"
                   height="150px"
@@ -583,7 +594,9 @@
               </div>
             </div>
             <div class="swiper-slide flex justify-center">
-              <div class="flex flex-col gap-1 w-fit items-center">
+              <div
+                class="flex flex-col gap-1 w-fit items-center hover:hover-3d transition-transform duration-300 p-4 rounded-lg"
+              >
                 <img
                   src="./assets/img/Avatar_3.png"
                   height="150px"
@@ -623,7 +636,9 @@
               </div>
             </div>
             <div class="swiper-slide flex justify-center">
-              <div class="flex flex-col gap-1 w-fit items-center">
+              <div
+                class="flex flex-col gap-1 w-fit items-center hover:hover-3d transition-transform duration-300 p-4 rounded-lg"
+              >
                 <img
                   src="./assets/img/Avatar_4.png"
                   height="150px"
@@ -703,7 +718,7 @@
               </h2>
             </div>
             <button
-              class="bg-white text-violet-950 border border-violet-950 px-14 py-3 rounded-full cursor-pointer transition font-semibold max-w-[400px]"
+              class="bg-white text-violet-950 border border-violet-950 px-8 lg:px-20 py-3 rounded-full cursor-pointer transition font-semibold max-w-[440px]"
             >
               Click here to quotes from Buyers
             </button>
@@ -735,7 +750,7 @@
               </h2>
             </div>
             <button
-              class="text-white bg-violet-950 border border-violet-950 px-8 lg:px-14 py-3 rounded-full cursor-pointer transition font-semibold max-w-[400px]"
+              class="text-white bg-violet-950 border border-violet-950 px-8 lg:px-20 py-3 rounded-full cursor-pointer transition font-semibold max-w-[440px]"
             >
               Click here to quotes from Buyers
             </button>
